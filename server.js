@@ -9,13 +9,14 @@ const cors = require("cors");
 connect_DB();
 
 //middleware
-app.set("trust proxy", 1);
+app.set("trust proxy", 5);
 app.use(
   cors({
     // origin: "https://graphic-card-seller.onrender.com",
     origin: [
       "http://localhost:3000",
       "https://graphic-card-seller.onrender.com",
+      "https://graphic-card-seller.cyclic.app",
     ], // replace with the origin of your client-side application
     credentials: true,
   })
