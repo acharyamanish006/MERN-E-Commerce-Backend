@@ -12,8 +12,10 @@ connect_DB();
 app.set("trust proxy", 5);
 app.use(
   cors({
+    // origin: "*",
     // origin: "https://graphic-card-seller.onrender.com",
     origin: [
+      "*",
       "http://localhost:3000",
       "https://graphic-card-seller.onrender.com",
       "https://graphic-card-seller.cyclic.app",
